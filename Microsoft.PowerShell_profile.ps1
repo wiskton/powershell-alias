@@ -1,4 +1,3 @@
-
 # docker commands
 $project_server_dir = "E:/Projetos/comissionamento/server"
 $project_client_dir = "E:/Projetos/comissionamento/client"
@@ -78,7 +77,7 @@ function loaddata {
 
 # git commands
 function pull {
-    git pull
+    git pull origin $arg
 }
 
 function push {
