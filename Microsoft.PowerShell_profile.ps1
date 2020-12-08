@@ -1,11 +1,15 @@
 
 # docker commands
-$project_server_dir = "E:/Projetos/comissionamento/server"
-$project_client_dir = "E:/Projetos/comissionamento/client"
+$project_server_dir = "W:/Projetos/comissionamento/server"
+$project_client_dir = "W:/Projetos/comissionamento/client"
 
 function docker_run() {
     cd $project_server_dir
     docker-compose run web $arg
+}
+
+function doc_run() {
+    docker_run $arg
 }
 
 function migrate {
@@ -35,7 +39,7 @@ function dev {
 
 function runback {
     cd $project_server_dir
-    docker-compose up --build
+    docker-compose -f docker-compose.yml -f docker-compose.tasks.yml up
 }
 
 function runfront {
@@ -78,7 +82,7 @@ function loaddata {
 
 # git commands
 function pull {
-    git pull
+    git pull origin $arg
 }
 
 function push {
