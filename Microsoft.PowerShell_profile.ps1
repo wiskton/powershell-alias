@@ -1,4 +1,3 @@
-
 # docker commands
 $project_server_dir = "W:/Projetos/comissionamento/server"
 $project_client_dir = "W:/Projetos/comissionamento/client"
